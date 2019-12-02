@@ -9,15 +9,26 @@
 
         <!-- Fonts -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400&display=swap" rel="stylesheet"> 
 
         <!-- Styles -->
         <style>
         </style>
+        <!-- Scripts -->
+        <script>
+        $(document).ready(function(){
+	        $('#nav-icon1').click(function(){
+		        $(this).toggleClass('open');
+	        });
+        });
+        </script>
     </head>
     <body>
         @include('inc.navbar')
         <div class="container">
             @include('inc.messages')
-        @yield('content') 
+            @yield('content') 
+        </div>
+        @include('inc.footer');
     </body>
 </html>

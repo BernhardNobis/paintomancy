@@ -2,3 +2,163 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+}
+label.bahburg{
+    display: none;
+}
+
+.navcontainer{
+    width: 100%;
+    position: fixed;
+        top: 0;
+    z-index: 9999;
+}
+
+.row{
+    background-color: rgb(85,71,128);
+}
+
+.nav-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 24px;
+    height: 60px;
+    font-size: 16px;
+    line-height: 40px;
+    width: 100%;
+}
+
+.container{
+    margin-top: 50px;
+}
+
+.mainpicdiv{
+    height: 700px;
+    background-image: url(public\images\mainimages\mainpic1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.opacitydiv{
+
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    opacity: 0.75;
+}
+
+.mottodiv{
+    padding-left: 5%;
+    padding-top: 40%;
+    margin-bottom: auto;
+}
+
+.servicesdiv{
+    padding: 1.25%;
+}
+
+.service{
+    padding: 5%;
+}
+
+.serviceimg{
+    width: 100%;
+}
+
+.servicedescriptiondiv{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    background-color: #969696;
+    margin-top: -5px;
+}
+
+.servicetextdiv{
+    text-decoration: none;
+    line-height: 25.6px;
+    font-weight: 300;
+    font-family: Roboto,sans-serif;
+}
+
+.servicetextdiv h3{
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 18px !important;
+}
+
+.servicetextdiv p{
+    font-weight: 300;
+    font-size: 16px !important;
+}
+.servicetextdiv a{
+    color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+
+    nav.topmenu { 
+        height: auto; 
+        max-height:0; 
+        width: 100%;
+        overflow: hidden; 
+        transition: all 0.5s;
+        position:absolute;
+        background: rgb(85,71,128);
+    }
+    
+    input#hamburg {
+        display:none
+    }
+
+    .line { 
+        position: absolute; 
+        left:10px;
+        height: 4px; width: 55px; 
+        background: #fff; border-radius: 2px;
+        display: block; 
+        transition: 0.5s; 
+        transform-origin: center; 
+    }
+    
+    .line:nth-child(1) { top: 12px; }
+    .line:nth-child(2) { top: 24px; }
+    .line:nth-child(3) { top: 36px; }
+
+    #hamburg:checked + .hamburg .line:nth-child(1){
+        transform: translateY(12px) rotate(-45deg);
+    }
+    
+    #hamburg:checked + .hamburg .line:nth-child(2){
+        opacity:0;
+    }
+    
+    #hamburg:checked + .hamburg .line:nth-child(3){
+        transform: translateY(-12px) rotate(45deg);
+    }
+
+    #hamburg:checked + .hamburg  + nav.topmenu { 
+        max-height: 600px; 
+        width: 100%;
+    }
+
+    label.hamburg { 
+        display: block;
+        background: rgb(85,71,128); 
+        width: 75px; 
+        height: 50px; 
+        position: relative; 
+        margin-left: auto;
+        border-radius: 4px; 
+    }
+
+    .otherlinks{
+        display: flex;
+        flex-direction: row;
+    }
+}
