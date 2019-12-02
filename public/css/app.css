@@ -53,7 +53,7 @@ label.bahburg {
   height: 100%;
   width: 100%;
   background-color: #fff;
-  opacity: 0.75;
+  opacity: 0.55;
 }
 
 .mottodiv {
@@ -103,6 +103,13 @@ label.bahburg {
 
 .servicetextdiv a {
   color: whitesmoke;
+}
+
+.footrow {
+  height: 400px;
+  background-image: url(/images/footer1.jpg?d6411ccef1bccc2cb337ebcc6d9ab9d7);
+  background-position: center;
+  background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {

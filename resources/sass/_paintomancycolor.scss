@@ -39,7 +39,7 @@ label.bahburg{
 
 .mainpicdiv{
     height: 700px;
-    background-image: url(public\images\mainimages\mainpic1.jpg);
+    background-image: url(..\public\images\mainimages\mainpic1.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -49,12 +49,12 @@ label.bahburg{
     height: 100%;
     width: 100%;
     background-color: #fff;
-    opacity: 0.75;
+    opacity: 0.55;
 }
 
 .mottodiv{
     padding-left: 5%;
-    padding-top: 40%;
+    padding-top: 40%; 
     margin-bottom: auto;
 }
 
@@ -98,6 +98,13 @@ label.bahburg{
 }
 .servicetextdiv a{
     color: whitesmoke;
+}
+
+.footrow{
+    height: 400px;
+    background-image: url(..\public\images\mainimages\footer1.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {

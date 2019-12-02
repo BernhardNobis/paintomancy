@@ -2,7 +2,7 @@
 
 @section ('content')
     <div class="mainpicdiv">
-        <div class="opacitydiv">
+        <div class="mainopacity opacitydiv">
             <div class="mottodiv">
                 <h1>Paintomancy</h1>
                 <h3>Wir erwecken Projekte zum leben</h3>
