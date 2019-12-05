@@ -7,7 +7,15 @@ body{
     background-color: white;
     font-family: 'Roboto', sans-serif;
 }
-label.bahburg{
+label.hamburg{
+    display: none;
+}
+
+input#hamburg {
+    display:none
+}
+
+input#galerycheck{
     display: none;
 }
 
@@ -33,29 +41,106 @@ label.bahburg{
     width: 100%;
 }
 
+.nav-linkdiv{
+    padding: 20px;
+}
+
+.nav-link{
+    color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.home-link{
+    text-decoration: underline;
+}
+
+.galeryrow{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+#galerydiv{
+    text-align: center;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+
+.galarrowdiv{
+    padding: 30% 0;
+}
+
+#galerysubnav{
+    display: none;
+}
+
+.galeryoption-item{
+    background: #554780;
+}
 .container{
     margin-top: 50px;
 }
 
 .mainpicdiv{
-    height: 700px;
+    height: 690px;
     background-image: url(../public/images/mainimages/mainpic1.jpg);
     background-position: center;
     background-size: cover;
 }
 
 .opacitydiv{
-
     height: 100%;
     width: 100%;
-    background-color: #fff;
-    opacity: 0.55;
+    background-color: rgba(254, 254, 254, 0.55);
 }
 
 .mottodiv{
-    padding-left: 5%;
-    padding-top: 40%; 
+   //height: 100%;
+    padding: 85% 5%;
+}
+
+.mottotextdiv{
+   // padding: 85% 0;
     margin-bottom: auto;
+    font-weight: 200;
+    font-family: Raleway, sanf-serif;
+}
+
+.mottotextdiv h1{
+    font-size: 40px !important;
+    margin-bottom: 20px;
+}
+
+.kontaktlinkdiv{
+    display: inherit;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+    width: 135px;
+}
+
+.kontaktlink{
+    opacity: 1.0;
+    min-width: 80%;
+    height: 50px;
+    width: 115px;
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    color: white;
+   
+}
+
+.kontakttext{
+    padding: 16px 30px;
+    position: relative;
+        top: 12px;
 }
 
 .servicesdiv{
@@ -107,6 +192,34 @@ label.bahburg{
     background-size: cover;
 }
 
+.cta{
+    height: 100%;
+    width: 100%;
+}
+
+.cta-child{
+    padding: 40% 0;
+}
+
+.ctachildlink{
+    font-weight: 300;
+    font-family: Raleway,sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.ctagal{
+    font-size: 24px !important;
+}
+
+.ctalink{
+    color: inherit;
+}
+
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 @media only screen and (max-width: 600px) {
 
     nav.topmenu { 
@@ -117,10 +230,6 @@ label.bahburg{
         transition: all 0.5s;
         position:absolute;
         background: rgb(85,71,128);
-    }
-    
-    input#hamburg {
-        display:none
     }
 
     .line { 
@@ -150,7 +259,7 @@ label.bahburg{
     }
 
     #hamburg:checked + .hamburg  + nav.topmenu { 
-        max-height: 600px; 
+        max-height: 9000px; 
         width: 100%;
     }
 
@@ -162,6 +271,38 @@ label.bahburg{
         position: relative; 
         margin-left: auto;
         border-radius: 4px; 
+    }
+
+    #galerysubnav { 
+        max-height:0; 
+        width: 100%;
+        overflow: hidden; 
+        transition: all 0.5s;
+        position:absolute;
+    }
+
+    #galeryshow { 
+        max-height: 600px; 
+        width: 100%;
+        height: auto; 
+        max-height:0; 
+        width: 100%;
+        transition: all 0.5s;
+        position:absolute;
+        color: #fff;
+    text-decoration: none;
+    font-weight: 300;
+    }
+
+    .nav-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 24px;
+        height: 60px;
+        font-size: 16px;
+        line-height: 40px;
+        width: 100%;
     }
 
     .otherlinks{

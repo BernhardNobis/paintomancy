@@ -4,8 +4,15 @@
     <div class="mainpicdiv">
         <div class="mainopacity opacitydiv">
             <div class="mottodiv">
-                <h1>Paintomancy</h1>
-                <h3>Wir erwecken Projekte zum leben</h3>
+                <div class="mottotextdiv">
+                    <h1>Paintomancy</h1>
+                    <h2>Wir erwecken deine Projekte zum Leben!</h2>
+                </div>
+                <div class="kontaktlinkdiv">
+                    <a class="kontaktlink" href="\kontakt\">
+                        <span class="kontakttext">Kontakt</span>
+                    </a>
+                </div>
             </div>
         </div>
     </div>
