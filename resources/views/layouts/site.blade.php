@@ -8,9 +8,9 @@
         <title>{{config('app.name', 'Paintomancy')}}</title>
 
         <!-- Fonts -->
-        <!--<link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:200,300&display=swap" rel="stylesheet"> 
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500,400&display=swap" rel="stylesheet"> 
+        <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:200,300,500&display=swap" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,500&display=swap" rel="stylesheet"> 
 
         <!-- Styles -->
         <style>
@@ -20,35 +20,52 @@
     </head>
     <body>
         @include('inc.navbar')
-        <div class="container">
+        <div class="container" id="container">
             @include('inc.messages')
             @yield('content') 
         </div>
     @include('inc.footer')
     </body>
     <script>
-        $(document).ready(function() {
-            document.getElementById("galerychecklabel").addEventListener("click",myFunction)
-        });
-        
-        function myFunction() {
-            alert("1");
-                document.getElementById("galerysubnav").id = "galeryshow";
-            alert("2");
-        };
-    </script>
-    <!--<script>
-        window.onclick = function(event) {
-            if (!event.target.matches('.galeryoption-item')) {
-                var dropdowns = document.getElementsByClassName("galeryoption-item");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.style.display ='block') {
-                        openDropdown.style.display ='hidden';
-                    }
-                }
+        document.getElementById("hamburglabel").addEventListener("click", function() {
+            el = document.getElementById("servicesdiv");
+            foot = document.getElementsByTagName("footer");
+            if(el.style.display === "none"){
+                el.style.display = "block";
             }
-        }
-    </script>    -->
+            else{
+            el.style.display = "none";
+            }
+            if(foot.style.display === "none"){
+                foot.style.display = "block";
+            }
+            else{
+            foot.style.display = "none";
+            }
+        }, false);
+    </script>
+    <script>
+        // // Get the modal
+               
+             function magnify($id, $picpath){
+                 alert($picpath)
+                 $modal = document.getElementById("modal"+$id);
+                  // Get the image and insert it inside the modal - use its "alt" text as a caption
+                 $img = document.getElementById("nimg"+$id);
+                 $modalImg = document.getElementById("mimg"+$id);
+                 $captionText = document.getElementById("caption"+$id);
+                 $modal.style.display = "block";
+                 alert($id);
+                 $modalImg.src = $picpath;
+                 $captionText.innerHTML = this.alt;
+             }
+            
+             // Get the <span> element that closes the modal
+             $span = document.getElementsByClassName("close")[0];
+            
+             // When the user clicks on <span> (x), close the modal
+             $span.onclick = function() {
+                 $modal.style.display = "none";
+                }
+    </script>
 </html>

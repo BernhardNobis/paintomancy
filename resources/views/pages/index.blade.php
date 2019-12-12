@@ -16,7 +16,7 @@
             </div>
         </div>
     </div>
-    <div class=servicesdiv>
+    <div class=servicesdiv id=servicesdiv>
         <div class="painting service">
             <img class="paintingimg serviceimg" src="images\services\painting1.jpg">
             <div class="servicedescriptiondiv">
@@ -54,4 +54,18 @@
             </div>
         </div>
     </div>
+    <div class="ctarow">
+            <div class="ctaopacity opacitydiv">
+                <div class="ctadiv">
+                    <div class="cta-child">
+                        <div class="ctalinkdiv ctachildlink">
+                            <a  class="ctagal ctalink" href="/galerie/">Galerie</a>
+                        </div>
+                        <div class="ctatextdiv ctachildlink">
+                            <a class="ctatext ctalink" href="/kontakt/">Was tolles gesehen? Kontaktiere uns und wir erwecken auch deine Modelle zum Leben</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 @endsection

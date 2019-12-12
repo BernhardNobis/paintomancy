@@ -61,9 +61,7 @@ class PicturesController extends Controller
      */
     public function show($id)
     {
-        //
-        $picture = Picture::find($id);
-        return view('galery.show')->with ('picture', $picture);
+            
     }
 
     /**
@@ -107,6 +105,6 @@ class PicturesController extends Controller
     {
         //
         $pictures = Picture::orderBy('id', 'desc')->get();
-        return view('galery.heresy')->with ('pictures', $pictures);
+        return view('galery.heresy')->with ('pictures', $pictures);  
     }
 }
