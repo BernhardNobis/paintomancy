@@ -12,7 +12,12 @@ class PagesController extends Controller
         return view('pages.index')->with('title', $title);
     }
 
-    //public function galerie(){
-    //    return view('pages.galerie');
-    //}
+    public function paintservice(){
+        return view('pages.bemalservice');
+    }
+
+    public function calculator(){
+        return view('pages.kalkulator');
+    }
+    
 }

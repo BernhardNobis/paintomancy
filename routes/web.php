@@ -22,12 +22,15 @@
 */
 
 
-Route::get('/', 'PagesController@index');
+
 Route::post('/kontakt/sendmail', 'MailsController@sendmail');
 Route::get('/kontakt', 'MailsController@kontakt');
 //Route::get('/galerie/heresy-40K','PicturesController@heresy');
 Route::get('/galerie/{name}','GaleryController@show');
 Route::get('/galerie', 'GaleryController@index');
+Route::get('/bemalservice', 'PagesController@paintservice');
+Route::get('/kalkulator', 'PagesController@calculator');
+Route::get('/', 'PagesController@index');
 
 
 //Route::get('/galerie/heresy-40K/{id}','PicturesController@show');

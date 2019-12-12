@@ -2,6 +2,8 @@
 
 @section('content')
 
+
+  <!--ERINNERUNG DAS DAS HIER NOCH IN EINENEN KOMMENDEN PICUTRES_ORDERN KOMMT!-->
     <h1>Einzelbild!</h1>
     <h3>{{$picture->description}}</h3>
     <small>reingestellt am {{$picture->created_at}}</small>

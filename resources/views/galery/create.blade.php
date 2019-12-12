@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('content')
-
+  <!--ERINNERUNG DAS DAS HIER NOCH IN EINENEN KOMMENDEN PICUTRES_ORDERN KOMMT!-->
     <h1>CREATE</h1>
     {!! Form::open(['action' => 'PicturesController@store' , 'method' => 'POST', 'files' => true]) !!}
         <div class='creatediv'>
