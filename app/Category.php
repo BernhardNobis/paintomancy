@@ -9,4 +9,8 @@ class Category extends Model
     //
      //Primary Key
     public $primaryKey = 'id';
+
+    public function pictures(){
+        return $this->hasMany('App\Picture', 'name','category');
+    }
 }

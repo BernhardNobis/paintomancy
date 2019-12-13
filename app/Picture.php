@@ -13,4 +13,8 @@ class Picture extends Model
     public $primaryKey = 'id';
     //Timestamps
     public $timestaps = true;
+
+    public function category(){
+        return $this->belongsTo('App\Category', 'category','name');
+    }
 }

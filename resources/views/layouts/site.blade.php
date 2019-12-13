@@ -16,6 +16,7 @@
         <style>
         </style>
         <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         
     </head>
     <body>
@@ -45,27 +46,29 @@
         }, false);
     </script>
     <script>
-        // // Get the modal
-               
-             function magnify($id, $picpath){
-                 alert($picpath)
-                 $modal = document.getElementById("modal"+$id);
-                  // Get the image and insert it inside the modal - use its "alt" text as a caption
-                 $img = document.getElementById("nimg"+$id);
-                 $modalImg = document.getElementById("mimg"+$id);
-                 $captionText = document.getElementById("caption"+$id);
-                 $modal.style.display = "block";
-                 alert($id);
-                 $modalImg.src = $picpath;
-                 $captionText.innerHTML = this.alt;
-             }
-            
-             // Get the <span> element that closes the modal
-             $span = document.getElementsByClassName("close")[0];
-            
-             // When the user clicks on <span> (x), close the modal
-             $span.onclick = function() {
-                 $modal.style.display = "none";
-                }
+        // // Get the modal   
+        function magnify($id, $picpath){
+            alert($picpath)
+            $modal = document.getElementById("modal"+$id);
+            // Get the image and insert it inside the modal - use its "alt" text as a caption
+            $img = document.getElementById("nimg"+$id);
+            $modalImg = document.getElementById("mimg"+$id);
+            $captionText = document.getElementById("caption"+$id);
+            $modal.style.display = "block";
+            alert($id);
+            $modalImg.src = $picpath;
+            $captionText.innerHTML = this.alt;
+        }
+        // Get the <span> element that closes the modal
+        $span = document.getElementsByClassName("close")[0];
+        // When the user clicks on <span> (x), close the modal
+        $span.onclick = function() {
+            $modal.style.display = "none";
+        }
+    </script>
+    <script>
+        $('#unitdrpdwn').on('change',function(){
+            $('#stagedrpdwn').val();
+         });
     </script>
 </html>

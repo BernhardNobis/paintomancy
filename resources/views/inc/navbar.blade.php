@@ -54,6 +54,12 @@
                                 </div>
                             </div>
                             <div class="nav-linkdiv">
+                                <a class="nav-link kontak-link" href="/bemalservice">Bemalservice</a>
+                            </div>
+                            <div class="nav-linkdiv">
+                                <a class="nav-link kontak-link" href="/bemalservice/systemauswahl">Bemalservicesystemauswahl</a>
+                            </div>
+                            <div class="nav-linkdiv">
                                 <a class="nav-link kontak-link" href="/kontakt">Kontakt</a>
                             </div>
                         <div class="otherlinks">

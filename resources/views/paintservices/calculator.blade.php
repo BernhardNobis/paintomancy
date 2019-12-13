@@ -3,6 +3,7 @@
 @section('content')
 
 <h1>DER KALKULATOR IST NOCH IN ARBEIT</h1>
+<h1>{{$mainsystem->system}}</h1>
     <div class="storediv">
         <section class="calculatordiv">
             <div class="calculatormaindiv">
@@ -27,41 +28,30 @@
                         </div>
                     </div>
                     <div class="calculatordropdowndiv">
+                           {{-- {!! Form::open(['action' => ('unbenanntefunction'),'method' => 'post', 'enctype' => 'multipart/form-data'])!!} --}}
                         {{Form::open()}}
                         <div class="calculatorcategorydiv">
                                 {{Form::label('unittype', 'Einheitentyp')}}
-                                {{Form::select('unittype', ['stage1' => 'Stage 1', 'stage2' => 'Stage 2', 'stage3' => 'Stage 3', 'stage4' => 'Stage 4', 'stage5' => 'Stage 5'], null, ['class' => 'unittypedrpdwn', 'placeholder' => 'Wähle die Art des Modells'])}}
+                                {!! Form::select( 'unit_id' ,$unittypes,null,['id'=>'unitdrpdwn', 'class' => 'drpdwn']) !!}
                         </div>
                         <div class="calculatorstagediv">
                             {{Form::label('stage', 'Qualität')}}
-                            {{Form::select('stage', ['stage1' => 'Stage 1', 'stage2' => 'Stage 2', 'stage3' => 'Stage 3', 'stage4' => 'Stage 4', 'stage5' => 'Stage 5'], null, ['class' => 'stagedrpdwn', 'placeholder' => 'Wähle eine Qualität aus'])}}
+                            {{Form::select('stage', ['stage1' => 'Stage 1', 'stage2' => 'Stage 2', 'stage3' => 'Stage 3', 'stage4' => 'Stage 4', 'stage5' => 'Stage 5'], null, ['id'=>'stagedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Qualität aus'])}}
                         </div>
                         <div class="calculatorbasediv">
                             {{Form::label('basetype', 'Basequalität')}}
-                            {{Form::select('base', ['standard' => 'Standard', 'hq' => 'High-Quality'], null, ['class' => 'basetypedrpdwn', 'placeholder' => 'Wie soll die Base sein?'])}}
+                            {{Form::select('base', ['standardbase' => 'Standard', 'hqbase' => 'High-Quality'], null, ['id'=>'bastetypedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wie soll die Base sein?'])}}
                         </div>
                         <div class="calculatorcraftdiv">
                                 {{Form::label('crafttype', 'Zusammenbau')}}
-                                {{Form::select('crafttype', ['nein' => 'Kein Zusammenbau', 'standard' => 'Standard', 'hq' => 'High Quality'], null, ['class' => 'crafttypedrpdwn', 'placeholder' => 'Wähle eine Option'])}}
+                                {{Form::select('crafttype', ['no' => 'Kein Zusammenbau', 'standardcraft' => 'Standard', 'hqcraft' => 'High Quality'], null, ['id'=>'crafttypedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Option'])}}
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="othersystemsdiv">
-            <div class="othersystemsheadlinediv">
-            </div>
-            <div class="othersystemsoptionsmaindiv">
-                <div class="othersystemsinfinitydiv othersystemsoptionsdiv">
-                    <div class="othersystemspicdiv">
-                    </div>
-                    <div class="othersystemspriceinfodiv">
-                    </div>
-                    <div class="othersystemslink">
-                    </div>
-                </div>
-            </div>
-        </section>
+        @include('inc.othersystems')
+        <h1>TEST</h1>
     </div>
 
 @endsection

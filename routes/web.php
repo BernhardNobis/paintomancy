@@ -28,8 +28,10 @@ Route::get('/kontakt', 'MailsController@kontakt');
 //Route::get('/galerie/heresy-40K','PicturesController@heresy');
 Route::get('/galerie/{name}','GaleryController@show');
 Route::get('/galerie', 'GaleryController@index');
-Route::get('/bemalservice', 'PagesController@paintservice');
-Route::get('/kalkulator', 'PagesController@calculator');
+Route::get('/bemalservice/systemauswahl', 'PaintServicesController@systemselection');
+Route::get('/bemalservice/{system}', 'PaintServicesController@calculator');
+Route::get('/bemalservice', 'PaintServicesController@paintservice');
+
 Route::get('/', 'PagesController@index');
 
 
