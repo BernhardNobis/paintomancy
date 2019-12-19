@@ -32,19 +32,20 @@
                         {{Form::open()}}
                         <div class="calculatorcategorydiv">
                                 {{Form::label('unittype', 'Einheitentyp')}}
-                                {!! Form::select( 'unit_id' ,$unittypes,null,['id'=>'unitdrpdwn', 'class' => 'drpdwn']) !!}
+                                {!! Form::select( 'unittype' ,$unittypes,null,['id'=>'unitdrpdwn', 'class' => 'drpdwn','placeholder' => 'Welcher Einheitentyp?']) !!}
                         </div>
                         <div class="calculatorstagediv">
-                            {{Form::label('stage', 'Qualität')}}
-                            {{Form::select('stage', ['stage1' => 'Stage 1', 'stage2' => 'Stage 2', 'stage3' => 'Stage 3', 'stage4' => 'Stage 4', 'stage5' => 'Stage 5'], null, ['id'=>'stagedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Qualität aus'])}}
+                            {{Form::label('stages', 'Qualität')}}
+                            {!! Form::select('stages', $stages, null, ['id'=>'stagedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Qualität aus'])!!}
                         </div>
                         <div class="calculatorbasediv">
                             {{Form::label('basetype', 'Basequalität')}}
-                            {{Form::select('base', ['standardbase' => 'Standard', 'hqbase' => 'High-Quality'], null, ['id'=>'bastetypedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wie soll die Base sein?'])}}
+                            {!! Form::select('basetype', $basetypes, null, ['id'=>'stagedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Qualität aus'])!!}
                         </div>
                         <div class="calculatorcraftdiv">
-                                {{Form::label('crafttype', 'Zusammenbau')}}
-                                {{Form::select('crafttype', ['no' => 'Kein Zusammenbau', 'standardcraft' => 'Standard', 'hqcraft' => 'High Quality'], null, ['id'=>'crafttypedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Option'])}}
+                            {{Form::label('crafttype', 'Zusammenbau')}}
+                            {!! Form::select('crafttype', $crafttypes, null, ['id'=>'stagedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Qualität aus'])!!}
+                            {{--{{Form::select('crafttype', ['no' => 'Kein Zusammenbau', 'standardcraft' => 'Standard', 'hqcraft' => 'High Quality'], null, ['id'=>'crafttypedrpdwn','class' => 'drpdwn', 'placeholder' => 'Wähle eine Option'])}}--}}
                         </div>
                     </div>
                 </div>

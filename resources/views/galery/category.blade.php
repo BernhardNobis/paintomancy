@@ -8,20 +8,19 @@
             <div class="picdiv">
                 <!--<img class="galerypic" src="{{$picture->picpath}}">-->
                 <!--<h4><a href="/galerie/heresy-40K/{{$picture->id}}">{{$picture->description}}</a></h4>-->
-                 <!-- Trigger the Modal -->
-            <img id="nimg{{$picture->id}}" onclick="magnify({{$picture->id}} ,'{{$picture->picpath}}')" class="galerypic" src="{{$picture->picpath}}" alt="{{$picture->description}}" style="width:100%;max-width:300px">
+                <!-- Trigger the Modal -->
+                <img id="nimg{{$picture->id}}" onclick="magnify({{$picture->id}} ,'{{$picture->picpath}}')" class="galerypic" src="{{$picture->picpath}}" alt="{{$picture->description}}" style="width:100%;max-width:300px">
+                <!-- The Modal -->
+                <div id="modal{{$picture->id}}" class="galerymodal">
 
-                    <!-- The Modal -->
-                    <div id="modal{{$picture->id}}" class="galerymodal">
+                    <!-- The Close Button -->
+                    <span class="close" onclick="gosmall({{$picture->id}})" id="close{{$picture->id}}">&times;</span>
 
-                        <!-- The Close Button -->
-                        <span class="close">&times;</span>
-
-                        <!-- Modal Content (The Image) -->
-                        <img class="galerymodal-content" id="mimg{{$picture->id}}">
-                        <!-- Modal Caption (Image Text) -->
-                        <div id="caption{{$picture->id}}"></div>
-                    </div> 
+                    <!-- Modal Content (The Image) -->
+                    <img class="galerymodal-content" id="mimg{{$picture->id}}">
+                    <!-- Modal Caption (Image Text) -->
+                    <div id="caption{{$picture->id}}"></div>
+                </div> 
             </div>
         @endforeach
     @else

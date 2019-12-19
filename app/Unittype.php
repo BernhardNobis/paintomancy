@@ -15,4 +15,8 @@ class Unittype extends Model
     public function category(){
         return $this->belongsTo('App\system', 'system','system');
     }
+
+    public function stage(){
+        return $this->belongsToMany('App\Stage');
+    }
 }

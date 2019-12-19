@@ -178,7 +178,98 @@ body {
   background-color: #554780;
 }
 
-@media only screen and (max-width: 600px) {
+.mainpicdiv {
+  height: 690px;
+  background-image: url(/images/mainpic1.jpg?bd2aceb1536715c0ed6118d9caf83fd7);
+  background-position: center;
+  background-size: cover;
+}
+
+.opacitydiv {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(254, 254, 254, 0.55);
+}
+
+.mottodiv {
+  padding: 60% 5%;
+}
+
+.mottotextdiv {
+  margin-bottom: auto;
+  font-family: Raleway, sanf-serif;
+}
+
+.mottotextdiv h1 {
+  font-weight: 300;
+  font-size: 40px !important;
+  margin-bottom: 20px;
+}
+
+.mottotextdiv h2 {
+  font-weight: 300;
+  font-size: 24px !important;
+  margin-bottom: 20px;
+}
+
+.kontaktlinkdiv {
+  display: inherit;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  font-family: Roboto, sans-serif;
+  line-height: 1.5;
+  width: 135px;
+}
+
+.kontaktlink {
+  opacity: 1;
+  min-width: 80%;
+  height: 50px;
+  width: 115px;
+  margin-top: 20px;
+  background-color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  position: relative;
+  display: block;
+  cursor: pointer;
+  color: white;
+}
+
+.kontakttext {
+  padding: 16px 30px;
+  position: relative;
+  top: 12px;
+}
+
+.servicebackground {
+  background-color: #969696;
+}
+
+.servicetextdiv {
+  text-decoration: none;
+  line-height: 25.6px;
+  font-weight: 300;
+  font-family: Roboto, sans-serif;
+}
+
+.servicetextdiv h3 {
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 18px !important;
+}
+
+.servicetextdiv p {
+  font-weight: 300;
+  font-size: 16px !important;
+}
+
+.servicetextdiv a {
+  color: whitesmoke;
+}
+
+@media only screen and (max-width: 963px) {
   nav.topmenu {
     height: auto;
     height: 100vh;
@@ -302,71 +393,6 @@ body {
     color: #fff;
   }
 
-  .mainpicdiv {
-    height: 690px;
-    background-image: url(/images/mainpic1.jpg?bd2aceb1536715c0ed6118d9caf83fd7);
-    background-position: center;
-    background-size: cover;
-  }
-
-  .opacitydiv {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(254, 254, 254, 0.55);
-  }
-
-  .mottodiv {
-    padding: 60% 5%;
-  }
-
-  .mottotextdiv {
-    margin-bottom: auto;
-    font-family: Raleway, sanf-serif;
-  }
-
-  .mottotextdiv h1 {
-    font-weight: 300;
-    font-size: 40px !important;
-    margin-bottom: 20px;
-  }
-
-  .mottotextdiv h2 {
-    font-weight: 300;
-    font-size: 24px !important;
-    margin-bottom: 20px;
-  }
-
-  .kontaktlinkdiv {
-    display: inherit;
-    max-width: 100%;
-    font-size: 16px;
-    font-weight: 300;
-    font-family: Roboto, sans-serif;
-    line-height: 1.5;
-    width: 135px;
-  }
-
-  .kontaktlink {
-    opacity: 1;
-    min-width: 80%;
-    height: 50px;
-    width: 115px;
-    margin-top: 20px;
-    background-color: black;
-    border-radius: 5px;
-    text-decoration: none;
-    position: relative;
-    display: block;
-    cursor: pointer;
-    color: white;
-  }
-
-  .kontakttext {
-    padding: 16px 30px;
-    position: relative;
-    top: 12px;
-  }
-
   .servicesdiv {
     padding: 1.25%;
   }
@@ -439,6 +465,278 @@ body {
 
   .ctalink {
     color: inherit;
+  }
+
+  /*GALERIE->INDEX*/
+
+  .allcategories {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .categoryinfodiv {
+    margin-left: 5%;
+    margin-right: 5%;
+    padding: 20% 0;
+    text-align: center;
+  }
+
+  .categoryinfodiv > h3 {
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 18px !important;
+    color: black;
+    line-height: 23px;
+  }
+
+  .categorylinkdiv {
+    padding: 10px 0;
+  }
+
+  .categorylinkdiv > h2 {
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 24px !important;
+    color: black;
+  }
+
+  .categorylinkdiv > h2 > a {
+    color: black;
+  }
+
+  .categorypicdiv {
+    padding: 20px 0;
+  }
+
+  .categorypic {
+    width: 100%;
+  }
+
+  /*CONTACT*/
+
+  .greyspacediv {
+    padding: 20% 5%;
+    background: #969696;
+  }
+
+  .whitespacediv {
+    background: white;
+    padding-bottom: 40px;
+  }
+
+  .contactinfodiv {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    padding-top: 20%;
+    padding-bottom: 5%;
+    text-align: center;
+  }
+
+  .contactinfodiv > h2 {
+    font-family: Raleway, sans-serif;
+    font-weight: 300;
+    margin-bottom: 20px;
+    font-size: 24px !important;
+    color: black;
+    line-height: 30px;
+  }
+
+  .formdiv {
+    margin-top: 40px;
+    padding: 0 10%;
+  }
+
+  .contactlabel {
+    margin-bottom: 10px;
+  }
+
+  .contactfielddiv {
+    margin-bottom: 10px;
+  }
+
+  .contactfield {
+    width: 90%;
+    padding: 15px;
+    border-radius: 2%;
+    font-family: "MS Shell Dlg 2";
+  }
+
+  .messagefield {
+    resize: none;
+  }
+
+  .privacycheck {
+    width: 20px;
+    height: 20px;
+  }
+
+  .privacylabel {
+    font-weight: 300;
+  }
+
+  .privacylink {
+    color: black;
+  }
+
+  .small {
+    font-weight: 300;
+  }
+
+  .submitdiv {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .submitbtn {
+    background-color: black;
+    color: white;
+    padding: 16px 30px;
+    border-radius: 3%;
+    border: 0;
+  }
+
+  footer {
+    background-color: #969696;
+  }
+
+  .footrow {
+    padding: 5% 5%;
+  }
+
+  footer a {
+    color: white;
+    font-weight: 300;
+  }
+
+  .datadiv {
+    margin-top: 30px;
+  }
+
+  .datalinkdiv {
+    padding: 2% 0;
+  }
+}
+
+@media only screen and (min-width: 964px) {
+  .container {
+    margin-top: 0;
+  }
+
+  nav.topmenu {
+    height: auto;
+    max-height: 100%;
+    width: 100%;
+    overflow: hidden;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    position: absolute;
+    background: #554780;
+  }
+
+  .alllinks {
+    display: -webkit-inline-box;
+    display: inline-flex;
+    -webkit-box-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+
+  .mainpicdiv {
+    height: 100vh;
+    background-image: url(/images/mainpic1.jpg?bd2aceb1536715c0ed6118d9caf83fd7);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .opacitydiv {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(254, 254, 254, 0.55);
+  }
+
+  .mottodiv {
+    padding-top: 60vh;
+    padding-left: 8%;
+    padding-bottom: 0;
+    padding-right: 0;
+  }
+
+  .mottotextdiv {
+    margin-bottom: auto;
+    font-family: Raleway, sanf-serif;
+  }
+
+  .mottotextdiv h1 {
+    font-weight: 300;
+    font-size: 40px !important;
+    margin-bottom: 20px;
+  }
+
+  .mottotextdiv h2 {
+    font-weight: 300;
+    font-size: 24px !important;
+    margin-bottom: 20px;
+  }
+
+  .kontaktlinkdiv {
+    display: inherit;
+    max-width: 100%;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: Roboto, sans-serif;
+    line-height: 1.5;
+    width: 135px;
+  }
+
+  .kontaktlink {
+    opacity: 1;
+    min-width: 80%;
+    height: 50px;
+    width: 115px;
+    margin-top: 20px;
+    background-color: black;
+    border-radius: 5px;
+    text-decoration: none;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    color: white;
+  }
+
+  .kontakttext {
+    padding: 16px 30px;
+    position: relative;
+    top: 12px;
+  }
+
+  .servicesdiv {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 5%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .service {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .serviceimg {
+    width: 100%;
+  }
+
+  .servicedescriptiondiv {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-top: -5px;
   }
 
   /*GALERIE->INDEX*/
